@@ -1,2 +1,2 @@
 # sistemaEmpleado
-Sistema de Control de Empleados por Áreas - Django+PosgreSQL
+Sistema de Control de Empleados por Áreas - Django+PostgreSQL
