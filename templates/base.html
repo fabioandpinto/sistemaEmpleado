@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <title> {% block titulo %} {% endblock titulo%} </title>
+</head>
+
+{% include 'includes/header.html' %}
+<body>
+    {% block content %}
+
+
+
+    {% endblock content %}
+</body>
+</html>

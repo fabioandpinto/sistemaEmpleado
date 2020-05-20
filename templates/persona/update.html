@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    EMPLEADOS DE {{empleados.department}}
+{% endblock titulo%}
+
+{% block content %}
+<div class="grid-container">
+<div class="cell">
+        <h2 class="cell" style="font-size: 30px; text-align: center">
+            Modificando a  {{empleado.first_name}} {{empleado.last_name}}
+            </h2>
+        <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="submit" value="Update">
+</form>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    ELIMINANDO EMPLEADO
+{% endblock titulo%}
+
+{% block content %}
+    <div class="callout alert">
+        <form method="post">
+            {% csrf_token %}
+            <p style="font-size: 30px"> Confirme que desea eliminar al empleado {{empleado.first_name}} {{empleado.last_name}}</p>
+            <button type="submit" class="alert button"> Confirme </button>
+        </form>
+    </div>
+{% endblock content %}

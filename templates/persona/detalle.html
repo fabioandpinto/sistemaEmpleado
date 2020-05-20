@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    DETALLE DE {{empleado.first_name}} {{empleado.last_name}}
+{% endblock titulo%}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-margin-x" style="font-size: 30px; text-align: center; color: #2ba6cb">
+            <h4 class="cell " >PERFIL DE EMPLEADO</h4>
+        <div class="image-container">
+            <img src="{{empleado.avatar.url}}" width="360px">
+        </div>
+    </div>
+    <br>
+    <div class="grid-margin-x">
+        <div class="cell">
+        <h5 style="text-align: center"> Nombre: {{empleado.first_name}} </h5>
+         <h5 style="text-align: center">Apellido: {{empleado.last_name}}</h5>
+         <h5 style="text-align: center">Departamento: {{empleado.department}}</h5>
+         <h5 style="text-align: center">Tipo de empleo: {{empleado.position}}</h5>
+         </div>
+    </div>
+</div>
+
+{% endblock content %}

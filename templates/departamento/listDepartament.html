@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} LISTADO DE DEPARTAMENTOS {% endblock titulo%}
+
+{% block content %}
+
+<div class="grid-container">
+<div class="cell">
+    <h2 class="cell" style="font-size: 30px; text-align: center">
+        Listado de Departamentos
+    </h2>
+<table>
+  <thead>
+    <tr>
+      <th width="200"> ID </th>
+      <th width="200"> Nombre </th>
+      <th width="200"> Nombre Corto </th>
+      <th width="150"> Tipo </th>
+      <th width="150"> Activo </th>
+      <th width="150"> Acción </th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for d in departamento %}
+  <tr>
+
+            <td> {{d.id}}</td>
+            <td> {{d.name }}</td>
+            <td> {{d.short_name}}</td>
+            <td> {{d.type }}</td>
+            <td> {{d.is_active }}</td>
+            <td> <a class="success button" href="{% url 'persona_app:por_area' d.id  %}"> VER EMPLEADOS </a>
+            </td>
+  </tr>
+          {% endfor %}
+
+  </tbody>
+</table>
+</div>
+</div>
+
+{% endblock content %}

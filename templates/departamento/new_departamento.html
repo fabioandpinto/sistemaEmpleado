@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creando Empleado y Departamento</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+</head>
+<body>
+    <form action="" method="post">{% csrf_token %}
+        <br class="hr"></br>
+        <h3> Datos de Empleado </h3>
+        <p class = "input-group-label">  Nombre: {{form.nombre}} </p>
+        <p class = "input-group-label"> Apellido: {{form.apellidos}} </p>
+        <br class="hr"></br>
+        <h3> Datos de Departamento </h3>
+        <p class = "input-group-label"> Departamento: {{form.department}} </p>
+        <p class = "input-group-label">Nombre Corto: {{form.short_name}} </p>
+        <p class = "input-group-label"> Tipo: {{form.type}}</p>
+        <p class = "input-group-label"> Activo: {{form.is_active}}</p>
+
+        <button type="button" class="success button"> Crear </button>
+    </form>
+</body>
+</html>

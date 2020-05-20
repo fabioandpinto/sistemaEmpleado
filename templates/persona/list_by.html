@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    EMPLEADOS DE {{empleados.department}}
+{% endblock titulo%}
+
+{% block content %}
+
+<div class="grid-container">
+<div class="cell">
+    <h2 class="cell" style="font-size: 30px; text-align: center">
+
+    </h2>
+
+    <table>
+  <thead>
+    <tr>
+      <th width="200"> ID </th>
+      <th width="200">Nombres </th>
+      <th width="150"> Apellidos </th>
+      <th width="150"> Departamento </th>
+
+      <th width="150"> Cargo </th>
+      <th width="150"> Acción </th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for e in empleados %}
+  <tr>
+            <td> {{e.id }}</td>
+            <td> {{e.first_name }}</td>
+            <td> {{e.last_name }}</td>
+            <td> {{e.department }}</td>
+            <td> {{e.position }}</td>
+            <td> <a class="success button" href="{% url 'persona_app:detail' e.id %}"> DETALLE </a>
+            </td>
+  </tr>
+          {% endfor %}
+
+  </tbody>
+</table>
+
+</div>
+</div>
+
+{% endblock content %}

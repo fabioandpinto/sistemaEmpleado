@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} REGISTRO DE EMPLEADOS {% endblock titulo%}
+
+
+{% block content %}
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+  <div class="orbit-wrapper">
+        <figure class="orbit-figure">
+          <img class="orbit-image" src="{% static 'img\prensa-header-img.jpg' %}" alt="Space">
+        </figure>
+  </div>
+</div>
+
+<div class="grid-x align-center">
+  <h2 class="cell large-8" style="font-size: 30px; text-align: center"> Bienvenido al Sistema de Administración de Empleados </h2>
+  <div class="cell large-8">
+    <div class="callout success">
+      <p class="cell large-8" style="font-size: 20px; text-align: center"> SIGA LAS INDICACIONES</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
